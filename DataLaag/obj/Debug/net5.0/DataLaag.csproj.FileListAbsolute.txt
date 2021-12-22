@@ -1,0 +1,15 @@
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\DataLaag.deps.json
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\DataLaag.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\ref\DataLaag.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\DataLaag.pdb
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\BusinessLogic.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\bin\Debug\net5.0\BusinessLogic.pdb
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.csproj.AssemblyReference.cache
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.AssemblyInfoInputs.cache
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.AssemblyInfo.cs
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.csproj.CoreCompileInputs.cache
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\ref\DataLaag.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.pdb
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\DataLaag\obj\Debug\net5.0\DataLaag.csproj.CopyComplete

@@ -1,0 +1,28 @@
+﻿<Window x:Class="UserInterfaceWPF.Bestelling.BestellingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterfaceWPF.Bestelling"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="BestellingWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Bestelling Toevoegen" Click="Button_Click_2"/>
+        <Button Grid.Column="1" Content="Bestelling zoeken" Click="Button_Click_1"/>
+        <Button Grid.Column="2" Click="Button_Click_3" Content="Help"/>
+    </Grid>
+</Window>

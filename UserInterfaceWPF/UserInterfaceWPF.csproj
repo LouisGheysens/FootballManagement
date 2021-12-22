@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Media\Stadion.png" />
+    <None Remove="Media\Voetbal.jpg" />
+    <None Remove="Media\VoetbalJongen.png" />
+    <None Remove="Media\VoetbalVrouwen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
+    <ProjectReference Include="..\DataLaag\DataLaag.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Media\Stadion.png" />
+    <Resource Include="Media\Voetbal.jpg" />
+    <Resource Include="Media\VoetbalJongen.png" />
+    <Resource Include="Media\VoetbalVrouwen.png" />
+  </ItemGroup>
+
+</Project>

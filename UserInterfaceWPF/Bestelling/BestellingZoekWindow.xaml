@@ -1,0 +1,86 @@
+﻿<Window x:Class="UserInterfaceWPF.Bestelling.BestellingZoekWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterfaceWPF.Bestelling"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="BestellingZoekWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <!--TextBlock and textbox-->
+            <TextBlock Text="Id" />
+            <TextBox x:Name="txt_id" Grid.Column="1" />
+
+            <TextBlock Text="StartDatum" Grid.Column="2" />
+            <DatePicker Name="dtpickr_startdatum" Grid.Column="3" />
+
+            <TextBlock Text="EindDatum" Grid.Column="4" />
+            <DatePicker Name="dtpickr_einddatum" Grid.Column="5" />
+
+            <Button x:Name="btn_zoekBestelling"
+                    Click="btn_zoekBestelling_Click"
+                    Grid.Column="6"
+                    Grid.Row="2"
+                    HorizontalAlignment="Right"
+                   Content="Zoek" />
+
+            <TextBlock Text="Klant" Grid.Row="1" />
+            <TextBox x:Name="txtbx_Klant"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     IsReadOnly="True"
+                     Loaded="txtbx_Klant_Loaded" Margin="0,0,0,16" Grid.RowSpan="2" />
+
+            <Button x:Name="btn_selectKlant"
+                    Content="Selecteer Klant"
+                    Grid.Row="2" Grid.ColumnSpan="3" Margin="14,37,0,-37" Grid.Column="4"
+                    Click="btn_selectKlant_Click"
+                    />
+            <Button x:Name="btn_Reset"
+                Click="btn_Reset_Click"
+                Grid.Column="6"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                Content="Reset" Margin="0,74,0,-74" />
+        </Grid>
+
+        <ListView x:Name="lstvw_Bestellingen" MouseDoubleClick="lstvw_Bestellingen_MouseDoubleClick" Grid.Row="1" Margin="0,109,0,0">
+            <ListView.Resources>
+                <ContextMenu x:Key="ItemMenu">
+                    <MenuItem Name="DeleteVoetbaltruitje" Header="Verwijderen" Click="DeleteVoetbaltruitje_Click" Command="{Binding Path=DataContext.MoreInfo, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}"/>
+                    <MenuItem Name="UpdateVoetbaltruitje" Header="Aanpassen"
+                              Command="{Binding Path=DataContext.MoreInfo, 
+                        RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}"/>
+                </ContextMenu>
+            </ListView.Resources>
+        </ListView>
+    </Grid>
+</Window>

@@ -1,0 +1,84 @@
+﻿<Window x:Class="UserInterfaceWPF.Bestelling.BestellingUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterfaceWPF.Bestelling"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="BestellingUpdateWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--Textblock, textbox, buttons-->
+            <TextBlock Text="Klant" />
+            <TextBox x:Name="txt_klant" IsReadOnly="True"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2" />
+
+            <Button x:Name="btn_SelecteerKlant"
+                    Content="Selecteer Klant"
+                    Click="btn_SelecteerKlant_Click"
+                    Grid.Column="3" Margin="10,-5,-10,5"/>
+
+            <TextBlock Text="Prijs" Grid.Row="1" />
+            <TextBox x:Name="txt_Prijs" IsReadOnly="True"
+                     Grid.Row="1" Grid.Column="1"
+                     Loaded="txt_Prijs_Loaded" />
+            <CheckBox x:Name="chkbx_betaald"
+                      Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="btn_SelecteerTruitje"
+                    Content="Selecteer truitje"
+                    Click="btn_SelecteerTruitje_Click"
+                    Grid.Row="1"
+                    Grid.Column="3" Margin="10,5,-10,-5" />
+        </Grid>
+        <DataGrid CellEditEnding="DataGridTruitjes_CellEditEnding" Name="DataGridTruitjes" Grid.Row="2" Margin="0,80,0,10" AutoGenerateColumns="False" Loaded="DataGridTruitjes_Loaded_1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Truitje" Binding="{Binding Truitje, Mode=OneWay}"/>
+                <DataGridTextColumn Header="Aantal" Binding="{Binding Aantal, Mode=TwoWay}"/>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <ContextMenu x:Key="ContextMenu" DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
+                    <MenuItem Name="DeleteVoetbaltruitje" Header="Verwijderen" Click="DeleteVoetbaltruitje_Click"/>
+                </ContextMenu>
+            </DataGrid.Resources>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="ContextMenu" Value="{StaticResource ContextMenu}"/>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+        <Button x:Name="btn_updateOrder" Click="btn_updateOrder_Click_1"
+                    Grid.Row="3" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtbx_Update" Text="Bestelling updaten" Width="123" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

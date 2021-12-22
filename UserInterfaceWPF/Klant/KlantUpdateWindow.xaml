@@ -1,0 +1,129 @@
+﻿<Window x:Class="UserInterfaceWPF.KlantUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInterfaceWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="KlantUpdateWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="InputStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+        <Style x:Key="OldElementStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="Gray"/>
+        </Style>
+        <Style x:Key="ComboStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+        <Style x:Key="TitelStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontWeight" Value="ExtraBlack" />
+            <Setter Property="FontSize" Value="34" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--Labels-->
+        <Label x:Name="lbl_Naam" Grid.Column="0" Grid.Row="2"
+               Content=" Nieuwe Naam"
+               HorizontalContentAlignment="Center" 
+               Margin="0,15,0,100"/>
+
+        <Label x:Name="Adres" Grid.Column="0" Grid.Row="2"
+               Content="Nieuw Adres" HorizontalContentAlignment="Center" Margin="0,89,0,23" />
+
+
+        <Label x:Name="NaamHuidig" Grid.Column="3" Grid.Row="2"
+               Content="Huidige naam" HorizontalContentAlignment="Center" 
+               Height="29" VerticalAlignment="Top" Margin="0,14,0,0"/>
+
+
+        <Label x:Name="AdresHuidig" Grid.Column="3" Grid.Row="2"
+               Content="Huidig Adres" HorizontalContentAlignment="Center" 
+               Margin="5,91,195,23" Grid.ColumnSpan="2" />
+
+        <Label x:Name="GiantTitel" Grid.Column="0" Grid.Row="1"
+               Style="{StaticResource TitelStyle}" HorizontalContentAlignment="Center" Grid.ColumnSpan="5" Margin="0,0,0,144" Grid.RowSpan="2" >
+            <Button x:Name="button_reset" Height="44" Width="145"
+                    Content="Reset" Click="button_reset_Click"/>
+        </Label>
+
+
+
+        <!--Textblock-->
+        <TextBox x:Name="txt_Naam" Style="{StaticResource InputStyle}"
+                   Grid.Column="2" Grid.Row="2" Margin="0,14,10,100"
+                 TextChanged="txt_Naam_TextChanged"
+                 />
+
+        <TextBox x:Name="txt_Adres" Style="{StaticResource InputStyle}"
+                 Grid.Column="2" Grid.Row="2" Margin="0,88,10,25" KeyDown="txt_Adres_KeyDown"
+                 />
+
+        <TextBox x:Name="txt_NaamHuidig" Style="{StaticResource OldElementStyle}"
+                 Grid.Column="4" Grid.Row="2" Height="29"
+                 VerticalAlignment="Top" IsEnabled="False" Margin="0,14,20,0" />
+
+        <TextBox x:Name="txt_AdresHuidig" 
+                 Style="{StaticResource OldElementStyle}"
+                 Grid.Column="4" Grid.Row="2" Height="29"
+                 VerticalAlignment="Top" IsEnabled="False" Margin="0,88,20,0" />
+
+
+
+        <!--Button-->
+        <Button Grid.Row="3" Content="Update klant" 
+                Name="UpdateWindow" Margin="0,109,0,4" Grid.ColumnSpan="5"
+                IsEnabled="True" Click="UpdateWindow_Click_1"/>
+
+
+        <Label x:Name="Id_Nieuw" Grid.Row="1"
+            Content="Id" HorizontalContentAlignment="Center" 
+            Height="29" VerticalAlignment="Top" Margin="-10,90,10,0"/>
+
+
+        <Label x:Name="Id_Hudiig" Grid.Row="1"
+            Content="Id" HorizontalContentAlignment="Center" 
+            Height="29"
+               VerticalAlignment="Top" 
+               Margin="190,90,10,0" 
+               Grid.ColumnSpan="2" 
+               Grid.Column="2"/>
+        
+        
+        <TextBox x:Name="txt_NaamNieuw" Style="{StaticResource InputStyle}" Grid.Row="1" Margin="195,90,15,25"
+            TextChanged="txt_Naam_TextChanged"
+            IsEnabled="False" Grid.ColumnSpan="3"
+                 />
+        <TextBox x:Name="txt_NaamHuidig_Copy" Style="{StaticResource OldElementStyle}"
+            Grid.Column="4" Grid.Row="1" Height="29"
+            VerticalAlignment="Top"
+                IsEnabled="False" Margin="0,90,20,0" />
+
+
+    </Grid>
+</Window>

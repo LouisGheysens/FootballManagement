@@ -1,0 +1,11 @@
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\bin\Debug\net5.0\BusinessLogic.deps.json
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\bin\Debug\net5.0\BusinessLogic.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\bin\Debug\net5.0\ref\BusinessLogic.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\bin\Debug\net5.0\BusinessLogic.pdb
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\ref\BusinessLogic.dll
+C:\Users\Eigenaar\source\repos\UserInterfaceWPF\BusinessLogic\obj\Debug\net5.0\BusinessLogic.pdb

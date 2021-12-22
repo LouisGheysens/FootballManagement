@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Bestelling\BestellingKlantSelecterenWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bestelling\BestellingSelecteerTruitjeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bestelling\BestellingToevoegenWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bestelling\BestellingUpdateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bestelling\BestellingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bestelling\BestellingZoekWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Klant\KlantAlgemeenWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Klant\KlantUpdateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Trui\TruiAlgemeenWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Trui\TruitjeUpdateWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Bestelling\BestellingKlantSelecterenWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bestelling\BestellingSelecteerTruitjeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bestelling\BestellingToevoegenWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bestelling\BestellingUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bestelling\BestellingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bestelling\BestellingZoekWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Klant\KlantAlgemeenWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Klant\KlantUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Trui\TruiAlgemeenWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Trui\TruitjeUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
