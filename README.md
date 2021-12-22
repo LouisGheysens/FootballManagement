@@ -1,5 +1,5 @@
 # VoetbalShop
 
-Project about Belgian football sho^p
+Project: Belgian football shop
 
 Author: Louis Gheysens
